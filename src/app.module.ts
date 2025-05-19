@@ -8,6 +8,9 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { UserController } from './users/users.controller';
 import { UserService } from './users/users.service';
+import { JwtStrategy } from './auth/strategy/jwt.strategy';
+import { ProductsModule } from './products/products.module';
+import { TempModule } from './temp/temp.module';
 
 @Module({
   imports: [
@@ -15,11 +18,14 @@ import { UserService } from './users/users.service';
       isGlobal: true,
     }),
     MongooseModule.forRoot(process.env.MONGO_URI!, mongooseOptions),
+    ProductsModule,
     UsersModule,
     AuthModule,
+    ProductsModule,
+    TempModule,
     // UserService,
   ],
   controllers : [AppController],
-  providers: [AppService],
+  providers: [AppService, JwtStrategy],
 })
 export class AppModule {}
