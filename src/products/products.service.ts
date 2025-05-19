@@ -1,6 +1,5 @@
 import { Injectable, InternalServerErrorException, UploadedFile } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { v4 as uuidv4 } from 'uuid';
 import { Model } from 'mongoose';
 import { AddProductDto } from './dto/add-product.dto';
 import { Product, ProductDocument } from './schemas/product.schema';

@@ -4,8 +4,6 @@ import { AddProductDto } from './dto/add-product.dto';
 import { FileInterceptor} from '@nestjs/platform-express';
 import { multerConfig } from './multer.config';
 import { File as MulterFile } from 'multer';
-import { Express } from 'express';
-
 
 @Controller('products')
 export class ProductsController {
