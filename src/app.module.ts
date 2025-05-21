@@ -11,6 +11,7 @@ import { UserService } from './users/users.service';
 import { JwtStrategy } from './auth/strategy/jwt.strategy';
 import { ProductsModule } from './products/products.module';
 import { TempModule } from './temp/temp.module';
+import { CategoryModule } from './category/category.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { TempModule } from './temp/temp.module';
     AuthModule,
     ProductsModule,
     TempModule,
+    CategoryModule,
     // UserService,
   ],
   controllers : [AppController],
